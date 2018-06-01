@@ -1,0 +1,32 @@
+{
+  "name": "qrcode-term",
+  "version": "0.0.1",
+  "description": "API converts a QRCode image to terminal output",
+  "main": "qrcode-term.js",
+  "dependencies": {
+    "jimp": "^0.2.28",
+    "qrcode-reader": "^1.0.4",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.87.0",
+    "restify": "^7.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogeared/qrcode-term.git"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "terminal"
+  ],
+  "author": "Micah Silverman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dogeared/qrcode-term/issues"
+  },
+  "homepage": "https://github.com/dogeared/qrcode-term#readme"
+}
