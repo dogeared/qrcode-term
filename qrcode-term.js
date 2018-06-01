@@ -15,7 +15,6 @@ function respond(req, res, next) {
             console.error(err);
             // TODO handle error
         }
-        console.log(value)
         qrTerminal.generate(value.result, function (qrCode) {
           res.sendRaw(qrCode);
           next();
@@ -23,7 +22,8 @@ function respond(req, res, next) {
     };
     qr.decode(image.bitmap);    
   }).catch(function (err) {
-    // handle an exception
+    console.error(err);
+    // TODO handle error
   });
 }
 
