@@ -13,7 +13,12 @@ function respond(req, res, next) {
     qr.callback = function(err, value) {
         if (err) {
             console.error(err);
-            // TODO handle error
+            res.send({
+              status: "ERROR",
+              url: req.body.qrUrl,
+              err: err
+            })
+            next();
         }
         qrTerminal.generate(value.result, function (qrCode) {
           res.sendRaw(qrCode);
@@ -23,7 +28,12 @@ function respond(req, res, next) {
     qr.decode(image.bitmap);    
   }).catch(function (err) {
     console.error(err);
-    // TODO handle error
+    res.send({
+      status: "ERROR",
+      url: req.body.qrUrl,
+      err: err
+    })
+    next();
   });
 }
 
